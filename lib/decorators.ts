@@ -12,6 +12,13 @@ const _params = (type: string, parameters: { [name: string]: any }) => (target: 
   if (!descriptor.value.parameters) descriptor.value.parameters = {};
   descriptor.value.parameters[type] = parameters;
 
+  const required: string[] = [];
+  Object.keys(parameters).map((key) => {
+    if (parameters[key].required) {
+      required.push(key);
+    }
+  });
+
   // additional wrapper for body
   let swaggerParameters = parameters;
   if (type === 'body') {
@@ -19,9 +26,11 @@ const _params = (type: string, parameters: { [name: string]: any }) => (target: 
       {
         name: 'data',
         description: 'request body',
+        required: true,
         schema: {
           type: 'object',
-          properties: parameters
+          properties: parameters,
+          required,
         }
       }
     ];

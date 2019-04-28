@@ -1,6 +1,6 @@
 {
-  "name": "koa-swagger-decorator",
-  "version": "1.5.13",
+  "name": "swagger-decorator-validate",
+  "version": "0.1.0",
   "description": "using decorator to automatically generate swagger doc for koa-router",
   "main": "dist/index.js",
   "dependencies": {
@@ -87,5 +87,5 @@
   ],
   "author": "cody",
   "license": "MIT",
-  "repository": "https://github.com/Cody2333/koa-swagger-decorator"
+  "repository": "https://github.com/DG-Wangtao/koa-swagger-decorator"
 }
