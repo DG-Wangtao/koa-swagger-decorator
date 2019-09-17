@@ -1,6 +1,6 @@
 {
   "name": "swagger-decorator-validate",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "using decorator to automatically generate swagger doc for koa-router",
   "main": "dist/index.js",
   "dependencies": {
